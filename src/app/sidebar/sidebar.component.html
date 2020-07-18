@@ -1,0 +1,28 @@
+<mat-sidenav-container class="example-container">
+  <mat-sidenav class="example-events" #sidenav position="end" mode="side" opened>
+
+    <div class="progressdiv">
+      <h2>List Progress</h2> {{total_count}}
+      <mat-progress-bar mode="determinate" value=60></mat-progress-bar>
+
+      <div>
+        <h2>Female Users</h2>
+        <h2> {{female_count}}</h2>
+        <h2>Male Users</h2>
+        <h2> {{male_count}}</h2>
+      </div>
+    </div>
+
+  </mat-sidenav>
+
+  <mat-sidenav-content>
+    <div style="float:right">
+      <span class="material-icons" (click)="sidenav.toggle()">menu</span>
+    </div>
+
+    <div class="user">
+      <app-user (totalCount)="countDetails($event)"></app-user>
+    </div>
+
+  </mat-sidenav-content>
+</mat-sidenav-container>

@@ -1,0 +1,20 @@
+.example-container {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+  }
+  
+  .example-events {
+    width: 400px;
+    overflow: auto;
+    border-left: 1px solid #555;
+  }
+  .user {
+      padding: 40px 20px 10px 20px;
+  }
+  .progressdiv {
+    padding: 40px 20px 10px 20px;
+    text-align: center;
+  }

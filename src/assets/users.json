@@ -1,0 +1,20 @@
+[
+    {
+        "name": "ABC",
+        "dob": "12-04-1991",
+        "languages": "Hindi",
+        "gender": "Female"
+    },
+    {
+        "name": "DEF",
+        "dob": "09-12-1994",
+        "languages": "English",
+        "gender": "Female"
+    },
+    {
+        "name": "PQR",
+        "dob": "05-06-1992",
+        "languages": "Hindi",
+        "gender": "Male"
+    }
+]

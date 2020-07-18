@@ -1,0 +1,8 @@
+
+::ng-deep .matvalue .mat-select-trigger {
+    display: inline-table;
+    cursor: pointer;
+    position: relative;
+    box-sizing: border-box;
+    top: 10px !important;
+}

@@ -1,0 +1,48 @@
+<mat-card ngClass="userform" ngClass.xs="userform_xs" style="margin-left: 20px;">
+  <mat-card-title class="user-title"> Add New User </mat-card-title>
+  <mat-card-content *ngIf="userform" ngClass="content-details" ngClass.xs="content-details_xs">
+
+    <form class="form-main-container" [formGroup]="userform">
+
+      <div class="form-container">
+        <div fxFlex="100" class="form-fields">
+          <mat-label fxFlex="20" class="matlabel">Full Name*</mat-label>
+          <input matInput fxFlex="80" placeholder="enter full name" class="matvalue" name="name" formControlName="name">
+        </div>
+        <div fxFlex="100" class="form-fields">
+          <mat-label fxFlex="20" class="matlabel">Date Of Birth*</mat-label>
+          <div fxFlex="80" class="matvalue" style="display:flex">
+            <input matInput [matDatepicker]="picker" [min]="today" name="dob" [(ngModel)]="selecteddob" formControlName="dob" placeholder="enter date of birth">
+            <mat-datepicker-toggle matSuffix [for]="picker" class="datetoggle"></mat-datepicker-toggle>
+            <mat-datepicker #picker></mat-datepicker>
+          </div>
+        </div>
+        <div fxFlex="100" class="form-fields">
+          <mat-label fxFlex="20" class="matlabel">Languages*</mat-label>
+          <mat-select fxFlex="80" placeholder="enter languages" class="matvalue" formControlName="languages" >
+            <mat-option *ngFor="let language of languageArray" [value]="language.val"> {{ language.val }} </mat-option>
+          </mat-select>
+
+        </div>
+        <div fxFlex="100" class="form-fields">
+          <mat-label fxFlex="20" class="matlabel">Gender*</mat-label>
+          <mat-radio-group fxFlex="80" formControlName="gender" style="display: flex;">
+            <mat-radio-button *ngFor="let gender of genderArray" [value]="gender.val" style="margin-left:10px">{{gender.val}}</mat-radio-button>
+          </mat-radio-group>
+        </div>
+
+        <div fxFlex="100" class="form-fields">
+          <mat-label fxFlex="20" class="matlabel">About*</mat-label>
+          <textarea fxFlex="80" rows="15" cols="50" class="mat-textarea" formControlName="about"></textarea>
+        </div>
+        <mat-card-actions style="text-align:center">
+          <button type="button" mat-button class="nav-button cancel-button" (click)="onCancelClick()">Cancel</button>
+          <button type="button" mat-button class="nav-button" [disabled]="!userform.valid" style="margin-left: 22px;" (click)="saveUserButtonClicked()">Save</button>
+        </mat-card-actions>
+      </div>
+
+      <!-- <span> {{userform.value | json}}</span> -->
+
+    </form>
+  </mat-card-content>
+</mat-card>

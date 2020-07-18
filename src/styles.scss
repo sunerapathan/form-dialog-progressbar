@@ -1,0 +1,135 @@
+@import "~@angular/material/prebuilt-themes/indigo-pink.css";
+@import '~@angular/material/theming';
+html,
+body {
+  font-family: 'Poppins', sans-serif;
+  top: 0;
+  left: 0;
+  margin: 0;
+  bottom: 0;
+}
+table {
+    border-collapse: collapse;
+    width: 100%;
+    box-shadow: none;
+}
+
+th.mat-header-cell {
+    text-align: center !important;
+}
+.material-icons {
+    cursor: pointer;
+}
+
+.nav-button {
+  background-color: #3f51b5 !important;
+  color: #ffffff !important;
+  width: 70px !important;
+  font-size: 11px !important;
+  height: 35px !important;
+  padding: 0px !important;
+  line-height: 1px !important;
+  border-radius: 5px !important;
+  text-transform: none !important;
+  bottom: 9px !important;
+  box-shadow: none !important;
+  border: none !important;
+  margin: 20px 20px 6px 1px !important;
+  cursor: pointer;
+}
+.nav-button[disabled] {
+  background: #606fc7  !important;
+  color: #fff !important;
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+.cancel-button {
+    background: #F7F7F7 !important;
+    text-align: center;
+    font-size: 12px !important;
+    letter-spacing: 0;
+    color: #3f51b5 !important;
+    opacity: 1;
+    cursor: pointer;
+  }
+.mat-card {
+    padding:0px !important;
+    box-shadow: none !important;
+    background: transparent !important;
+}
+.mat-table {
+    box-shadow: none !important;
+}
+.mat-drawer {
+    background-color: #ddd !important;
+    color: rgba(0,0,0,.87);
+}
+.standard-modalbox .mat-dialog-container {
+    width: 650px !important;
+    height: fit-content !important;
+    overflow-x: hidden !important;
+    overflow-y: hidden !important;
+    background: #F7F7F7 0% 0% no-repeat padding-box;
+    opacity: 1;
+  }
+  .form-fields {
+    display: inline-flex !important;
+    margin-bottom: 10px !important;
+  }
+  .matlabel {
+    text-align: left;
+    letter-spacing: 0;
+    color: #565151;
+    opacity: 1;
+    font-size: 13px;
+    font-weight: bold;
+    margin-top:8px
+  }
+  
+  // For all form fields
+.matvalue {
+    height: 35px !important;
+    color: #000000 !important;
+    border-radius: 5px !important;
+    padding-left: 7px !important;
+    font-size: 12px !important;
+    border: solid #BDD5EA !important;
+    border-width: 1px 1px !important;
+    background: #FFFFFF 0% 0% no-repeat padding-box !important;
+    border: 1px solid #E1E2E4 !important;
+    opacity: 1;
+  }
+  .mat-textarea {
+    height: 50px !important;
+    border-radius: 5px;
+    border: 1px solid #E1E2E4 !important;
+    padding-left: 7px;
+    padding-left: 7px !important;
+    font-size: 12px !important;
+    opacity: 1;
+  }
+
+.datetoggle {
+    margin-left:-30px;
+    margin-top: -4px;
+}
+
+.form-container {
+    display: grid !important;
+}
+h2 {
+    font-weight: 500;
+    font-size:20px;
+    color: rgba(0,0,0,.87);
+}
+.mat-progress-bar {
+    display: block;
+    height: 15px !important;
+    overflow: hidden;
+    position: relative;
+    transition: opacity 250ms linear;
+    width: 80% !important;
+    border-radius: 5px;
+    margin-left: auto !important;
+    margin-right: auto !important;
+}

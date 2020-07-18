@@ -1,0 +1,41 @@
+<mat-card>
+<mat-form-field style="float:right">
+  <mat-label>Filter</mat-label>
+  <input matInput (keyup)="applyFilter($event)" placeholder="search">
+</mat-form-field>
+
+<table mat-table [dataSource]="dataSource" class="mat-table">
+
+  <!-- Name Column -->
+  <ng-container matColumnDef="name">
+    <th mat-header-cell *matHeaderCellDef> Name </th>
+    <td mat-cell *matCellDef="let element"> {{element.name}} </td>
+  </ng-container>
+
+  <!-- Birth Date Column -->
+  <ng-container matColumnDef="dob">
+    <th mat-header-cell *matHeaderCellDef> Birth Date </th>
+    <td mat-cell *matCellDef="let element"> {{element.dob | date}} </td>
+  </ng-container>
+
+  <!-- Languages Column -->
+  <ng-container matColumnDef="languages">
+    <th mat-header-cell *matHeaderCellDef> Languages </th>
+    <td mat-cell *matCellDef="let element"> {{element.languages}} </td>
+  </ng-container>
+
+  <!-- Gender Column -->
+  <ng-container matColumnDef="gender">
+    <th mat-header-cell *matHeaderCellDef> Gender </th>
+    <td mat-cell *matCellDef="let element"> {{element.gender}} </td>
+  </ng-container>
+
+  <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+  <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+</table>
+<mat-paginator class="matPaginators" #paginator [pageSize]="5" [pageSizeOptions]="[5, 10, 15, 20]" showFirstLastButtons></mat-paginator>
+
+<mat-dialog-actions style="float: right;">
+  <button type="button" mat-button class="nav-button" (click)="onAddUserButtonClicked()">Add User</button>
+</mat-dialog-actions>
+</mat-card>
