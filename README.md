@@ -1,10 +1,8 @@
 # form-dialog-progressbar
-Created angular material forms pass data from dialogs to forms using @input @output property and display table count over progress bar using observable.
-
-# form-dialog-progressbar
 In this project created angular material forms pass data from dialogs to forms using @input @output property and display table count over progress bar using observable.
 Created a single page application to show a list of users with a sidebar having a progress bar and statistics. Statistics on the sidebar will show the number of female users and number of male users. Progress bar will complete on successful addition of 10 users.
 
+Created angular material forms pass data from dialogs to forms using @input @output property and display table count over progress bar using observable.
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.0.0.
 
